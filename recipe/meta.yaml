@@ -1,5 +1,5 @@
 {% set name = "ag-ui-langgraph" %}
-{% set version = "0.0.34" %}
+{% set version = "0.0.35" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ag_ui_langgraph-{{ version }}.tar.gz
-  sha256: 755323d5256407ce62d6b9af447a9f1250554e7056c5e2115027a4174a736c41
+  sha256: 34ee82e30bf110e36d0bc0819e733d70452d1e1069ee26cb08f3483645e9e5f4
 
 build:
   entry_points:
