@@ -23,7 +23,8 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - ag-ui-protocol >=0.1.10
+    - ag-ui-protocol >=0.1.15
+    - ag-ui-a2ui-toolkit >=0.0.1
     - langchain >=1.2.0
     - langchain-core >=0.3.0
     - langgraph >=0.3.25,<2
