@@ -1,0 +1,57 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
+schema_version: 1
+
+context:
+  version: "0.0.40"
+
+package:
+  name: ag-ui-langgraph
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/a/ag-ui-langgraph/ag_ui_langgraph-${{ version }}.tar.gz
+  sha256: 11b009920b79fe97162f53777ecd7860c8a0999479d55f5d85d8da979d5be28f
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - "dev = ag_ui_langgraph.dojo:main"
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - hatchling
+    - pip
+  run:
+    - python >=${{ python_min }},<4.0
+    - ag-ui-protocol >=0.1.15
+    - ag-ui-a2ui-toolkit >=0.0.2
+    - langchain >=1.2.0
+    - langchain-core >=0.3.0
+    - langgraph >=0.3.25,<2
+    - pydantic >=2.0.0
+  run_constraints:
+    - fastapi >=0.115.12
+
+tests:
+  - script:
+      - python -c "import ag_ui_langgraph"
+      - pip check
+    requirements:
+      run:
+        - pip
+        - fastapi >=0.115.12
+
+about:
+  summary: "Implementation of the AG-UI protocol for LangGraph."
+  license: MIT
+  license_file: LICENSE
+  homepage: https://pypi.org/project/ag-ui-langgraph/
+  repository: https://github.com/ag-ui-protocol/ag-ui/tree/main/integrations/langgraph/python
+
+extra:
+  recipe-maintainers:
+    - rxm7706
