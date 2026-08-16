@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: 0.0.42
+  version: 0.0.43
 
 package:
   name: ag-ui-langgraph
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/ag-ui-langgraph/ag_ui_langgraph-${{ version }}.tar.gz
-  sha256: 5384647b9b7b098189530c59b26741581dd009c8dfda907fbfaa9bafa8d21249
+  sha256: 6df1577c039c91d9dbd3b0f279bf4b545837ce7f65299e8c7947299c2d467d9c
 
 build:
   number: 0
@@ -31,7 +31,7 @@ requirements:
     - ag-ui-a2ui-toolkit >=0.0.4
     - langchain >=1.2.0
     - langchain-core >=0.3.0
-    - langgraph >=0.3.25,<2
+    - langgraph >=0.6.0,<2
     - pydantic >=2.0.0
   run_constraints:
     - fastapi >=0.115.12
