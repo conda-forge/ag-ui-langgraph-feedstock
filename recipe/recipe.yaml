@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.0.48"
+  version: "0.1.0"
 
 package:
   name: ag-ui-langgraph
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/ag-ui-langgraph/ag_ui_langgraph-${{ version }}.tar.gz
-  sha256: ac87e90df3a921121abae133219314e9bb0d3afbdd62116f2f10a9198146dac9
+  sha256: faa6b6dc4e7452f8a94f74ad6960b7f1333554fdcb6ea28e08484e83f9cbe6e8
 
 build:
   number: 0
